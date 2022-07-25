@@ -1,0 +1,305 @@
+:root {
+  --clr-issue_bg1: #e30512;
+  --clr-issue_bg2: #1d3fbb;
+  --clr-issue_bg3: #ffbe00;
+  --clr-issue_bg4: #ff651a;
+  --clr-issue_bg5: #00c1b5;
+  --clr-issue_bg6: #f4f4f4;
+
+  --clr-accent: #e568ac;
+  --clr-neutral: #f4f4f4;
+
+  --ff-primary: "Roboto Condensed", sans-serif;
+
+  --fw-regular: 300;
+  --fw-semi-bold: 400;
+  --fw-bold: 700;
+
+  --fs-small: 0.725rem;
+  --fs-primary: 1rem;
+  --fs-medium: 1.125rem;
+  --fs-large: 2rem;
+}
+
+/* Resets */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+/* Core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+/* Any elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* utility classes */
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+body {
+  background-color: var(--clr-issue_bg6);
+  transition: background-color 1s ease;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-primary);
+  font-weight: var(--fw-bold);
+}
+
+h2 {
+  font-family: sans-serif;
+  font-size: var(--fs-medium);
+  font-weight: var(var(--fw-regular));
+}
+
+li {
+  list-style-type: none;
+}
+
+p {
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-small);
+}
+
+/* general styling */
+
+.contact {
+  position: fixed;
+  padding: 20px 40px 0 0;
+  top: 0;
+  right: 0;
+}
+
+.container {
+  min-height: 100vh;
+  height: 100vh;
+  position: relative;
+}
+
+.container-oos {
+  min-width: 600px;
+}
+
+.copyright {
+  font-size: var(--fs-small);
+}
+
+.copyright a {
+  text-decoration: underline;
+}
+
+.copyright a:hover {
+  text-decoration: none;
+}
+
+.description {
+  position: fixed;
+  padding: 20px;
+  bottom: 0;
+  left: 0;
+  width: 20%;
+  margin: 0;
+}
+
+.description-container {
+  width: 290px;
+}
+
+.header-title {
+  font-size: var(--fs-large);
+  text-transform: uppercase;
+  position: fixed;
+  padding: 20px;
+}
+
+.image {
+  max-width: 400px;
+}
+
+.images-container {
+  height: 100vh;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+}
+
+.image-issue {
+  text-align: center;
+}
+
+.image-issue h2 {
+  padding-bottom: 0.5rem;
+}
+
+.image-issue p {
+  padding: 0.5rem;
+  font-size: var(--fs-primary);
+  font-weight: var(--fw-semi-bold);
+}
+
+.issues {
+  font-weight: var(--fw-semi-bold);
+  font-size: var(--fs-medium);
+  font-family: var(--ff-primary);
+  letter-spacing: 0.5px;
+  position: fixed;
+  padding: 0 40px 20px 0;
+  bottom: 0;
+  right: 0;
+}
+
+.privacy-policy {
+  padding-top: 20px;
+}
+
+.privacy-policy a {
+  text-decoration: underline;
+}
+
+.privacy-policy a:hover {
+  text-decoration: none;
+}
+
+.uppercase a {
+  text-transform: uppercase;
+}
+
+/* panel */
+
+.panel {
+  min-height: 100vh;
+  height: 95vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+
+  /* outline: 5px solid hotpink; */
+}
+
+/* colors */
+
+.color-accent a {
+  color: var(--clr-accent);
+}
+
+.color-accent span {
+  color: var(--clr-accent);
+}
+
+.color-neutral a {
+  color: var(--clr-neutral);
+}
+
+.color-neutral span {
+  color: var(--clr-neutral);
+}
+
+.color-green {
+  background-color: var(--clr-issue_bg5);
+}
+.color-orange {
+  background-color: #ff651a;
+}
+.color-yellow {
+  background-color: #ffbe00;
+}
+.color-blue {
+  background-color: #1d3fbb;
+}
+.color-red {
+  background-color: #e30512;
+}
+
+.container-white {
+  background-color: var(--clr-issue_bg6);
+  transition: background-color 3s ease;
+  scroll-snap-align: start;
+}
+
+.container-green {
+  background-color: var(--clr-issue_bg5);
+  transition: background-color 1s ease;
+  scroll-snap-align: start;
+}
+.container-orange {
+  background-color: var(--clr-issue_bg4);
+  transition: background-color 1s ease;
+  scroll-snap-align: start;
+}
+.container-yellow {
+  background-color: var(--clr-issue_bg3);
+  transition: background-color 1s ease;
+  scroll-snap-align: start;
+}
+.container-blue {
+  background-color: var(--clr-issue_bg2);
+  transition: background-color 1s ease;
+  scroll-snap-align: start;
+}
+.container-red {
+  background-color: var(--clr-issue_bg1);
+  transition: background-color 1s ease;
+  scroll-snap-align: start;
+}
